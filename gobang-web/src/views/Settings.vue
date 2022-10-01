@@ -15,9 +15,9 @@
 <script setup lang="ts">
 
 import { ref } from 'vue';
-import i18n from "@/locals";
+import { useI18n } from 'vue-i18n'
 
-let { locale } = i18n.global;
+const { locale } = useI18n();
 
 const lang = ref('en')
 const langOptions = [{
@@ -28,7 +28,7 @@ const langOptions = [{
     label: '中文'
 }]
 const onLang = () => {
-    locale = lang.value === 'zh' ? 'zh' : 'en'
+    locale.value = lang.value
     localStorage.setItem('lang', lang.value)
 }
 </script>

@@ -19,7 +19,7 @@ const store = useStore();
 const { t, locale } = i18n.global;
 
 function setTitle(title: string) {
-    if (locale === 'zh') {
+    if (locale.value === 'zh') {
         title = title.replace(/Room/g,"房间")
         title = title.replace(/Hall/g,"大厅")
     }

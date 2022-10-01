@@ -37,9 +37,14 @@ const router = useRouter();
         min-width: 1200px;
     }
     .brand-name {
+        position: absolute;
         font-size: x-large;
         font-style: italic;
-        float: right;
-        margin-top: 1%;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
     }
 </style>
